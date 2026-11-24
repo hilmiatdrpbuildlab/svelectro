@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T08:00:00Z",
+  "title": "Design System: SV Electro",
+  "extensions": {
+    "colorMeta": {
+      "live-wire": {
+        "role": "primary",
+        "displayName": "Live-Wire Orange",
+        "canonical": "#ff3300",
+        "tonalRamp": [
+          "#5e1300",
+          "#8c1c00",
+          "#b02300",
+          "#d42a00",
+          "#ff3300",
+          "#ff6138",
+          "#ffc2ad",
+          "#fff3ef"
+        ]
+      },
+      "live-wire-deep": {
+        "role": "primary",
+        "displayName": "Live-Wire Deep",
+        "canonical": "#d42a00",
+        "tonalRamp": [
+          "#5e1300",
+          "#8c1c00",
+          "#b02300",
+          "#d42a00",
+          "#ff3300",
+          "#ff6138",
+          "#ffc2ad",
+          "#fff3ef"
+        ]
+      },
+      "live-wire-pressed": {
+        "role": "primary",
+        "displayName": "Live-Wire Pressed",
+        "canonical": "#b02300"
+      },
+      "live-wire-wash": {
+        "role": "primary",
+        "displayName": "Live-Wire Wash",
+        "canonical": "#fff3ef"
+      },
+      "switchboard-ink": {
+        "role": "neutral",
+        "displayName": "Switchboard Ink",
+        "canonical": "#0f1113",
+        "tonalRamp": [
+          "#0f1113",
+          "#181b1f",
+          "#22272b",
+          "#343a40",
+          "#5c666e",
+          "#aab2b9",
+          "#e8eaec",
+          "#f5f6f7"
+        ]
+      },
+      "ink-panel": {
+        "role": "neutral",
+        "displayName": "Ink Panel",
+        "canonical": "#181b1f"
+      },
+      "ink-text": {
+        "role": "neutral",
+        "displayName": "Ink Text",
+        "canonical": "#22272b"
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "#5c666e"
+      },
+      "ink-hairline": {
+        "role": "neutral",
+        "displayName": "Ink Hairline",
+        "canonical": "#d1d5d9"
+      },
+      "ink-wash": {
+        "role": "neutral",
+        "displayName": "Ink Wash",
+        "canonical": "#f5f6f7"
+      },
+      "van-slate": {
+        "role": "neutral",
+        "displayName": "Van Slate",
+        "canonical": "#8e9ca4",
+        "tonalRamp": [
+          "#2c3337",
+          "#465157",
+          "#62707a",
+          "#8e9ca4",
+          "#a9b4ba",
+          "#c4ccd1",
+          "#dfe4e7",
+          "#f1f4f5"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only; condensed uppercase, accent line in Live-Wire Orange."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s and CMS page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service tile names and trust-bar titles; condensed uppercase."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Intros and subtitles; running copy at 1rem, max ~36rem."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Footer column headings and small field labels; never a kicker above a heading."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Bold tracked button labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "live-glow",
+        "value": "0 1px 0 rgb(255 255 255 / 0.2) inset, 0 8px 24px -8px rgb(212 42 0 / 0.6)",
+        "purpose": "Primary button only; the button that's switched on."
+      },
+      {
+        "name": "lift",
+        "value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        "purpose": "Service and portfolio cards on hover, with translateY(-4px)."
+      },
+      {
+        "name": "overlay",
+        "value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+        "purpose": "Modals, toasts, floating badges, login card, dragged photo."
+      },
+      {
+        "name": "field-inset",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "Resting form fields."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-snap",
+        "value": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "Default easing for buttons, cards, menus, dialogs and the mobile bar."
+      },
+      {
+        "name": "duration-control",
+        "value": "200ms",
+        "purpose": "Button and link state changes."
+      },
+      {
+        "name": "duration-surface",
+        "value": "300ms",
+        "purpose": "Card lift, header background, mobile bar, menu items."
+      },
+      {
+        "name": "duration-image",
+        "value": "700ms",
+        "purpose": "Slow photo zoom (scale 1.04) inside service tiles on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The quote call-to-action; solid Live-Wire Deep with the live glow and a firm lift.",
+      "html": "<button class=\"ds-btn-primary\">Gratis offerte aanvragen <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 20px; border: 0; border-radius: 6px; background: var(--color-brand-600, #d42a00); color: #fff; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.025em; cursor: pointer; box-shadow: 0 1px 0 rgb(255 255 255 / 0.2) inset, 0 8px 24px -8px rgb(212 42 0 / 0.6); transition: background 200ms cubic-bezier(0.2,0.8,0.2,1), transform 200ms cubic-bezier(0.2,0.8,0.2,1); } .ds-btn-primary:hover { background: var(--color-brand-700, #b02300); transform: translateY(-2px); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline: 3px solid var(--color-brand-500, #ff3300); outline-offset: 4px; }"
+    },
+    {
+      "name": "Ghost Button (on ink)",
+      "kind": "button",
+      "refersTo": "button-ghost-light",
+      "description": "Secondary action on Switchboard Ink: transparent with a white hairline ring.",
+      "html": "<div class=\"ds-ink-stage\"><button class=\"ds-btn-ghost\">Bekijk onze realisaties</button></div>",
+      "css": ".ds-ink-stage { background: #0f1113; padding: 24px; border-radius: 8px; } .ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 20px; border: 0; border-radius: 6px; background: transparent; color: #fff; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.025em; cursor: pointer; box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.3); transition: background 200ms cubic-bezier(0.2,0.8,0.2,1), box-shadow 200ms; } .ds-btn-ghost:hover { background: rgb(255 255 255 / 0.1); box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.6); } .ds-btn-ghost:focus-visible { outline: 3px solid #ff3300; outline-offset: 4px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on white surfaces.",
+      "html": "<button class=\"ds-btn-outline\">Terug naar overzicht</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 20px; border: 0; border-radius: 6px; background: #fff; color: #181b1f; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.025em; cursor: pointer; box-shadow: inset 0 0 0 1px #d1d5d9; transition: box-shadow 200ms cubic-bezier(0.2,0.8,0.2,1); } .ds-btn-outline:hover { box-shadow: inset 0 0 0 1px #7d8890; } .ds-btn-outline:focus-visible { outline: 3px solid #ff3300; outline-offset: 4px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Quote-form and CMS input with label; Live-Wire focus ring.",
+      "html": "<label class=\"ds-field-wrap\"><span class=\"ds-field-label\">Postcode en gemeente</span><input class=\"ds-field\" placeholder=\"2220 Heist-op-den-Berg\" /></label>",
+      "css": ".ds-field-wrap { display: block; max-width: 360px; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-field-label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; color: #22272b; } .ds-field { display: block; width: 100%; box-sizing: border-box; padding: 10px 14px; font: inherit; font-size: 0.95rem; color: #181b1f; background: #fff; border: 1px solid #d1d5d9; border-radius: 6px; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); transition: border-color 150ms, box-shadow 150ms; } .ds-field::placeholder { color: #5c666e; } .ds-field:focus { outline: none; border-color: #d42a00; box-shadow: 0 0 0 2px rgb(255 51 0 / 0.25); }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Portfolio category filter with count; selected state goes Switchboard Ink.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Alles <span>12</span></button><button class=\"ds-chip\" aria-pressed=\"false\">Laadpalen <span>3</span></button><button class=\"ds-chip\" aria-pressed=\"false\">Renovatie <span>5</span></button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; flex-wrap: wrap; } .ds-chip { min-height: 44px; padding: 0 16px; border: 0; border-radius: 9999px; background: #fff; color: #343a40; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; box-shadow: inset 0 0 0 1px #d1d5d9; transition: box-shadow 150ms, background 150ms; } .ds-chip span { margin-left: 4px; font-weight: 600; opacity: 0.6; } .ds-chip:hover { box-shadow: inset 0 0 0 1px #7d8890; } .ds-chip[aria-pressed=\"true\"] { background: #0f1113; color: #fff; box-shadow: inset 0 0 0 1px #0f1113; } .ds-chip:focus-visible { outline: 3px solid #ff3300; outline-offset: 2px; }"
+    },
+    {
+      "name": "Service Tile",
+      "kind": "card",
+      "refersTo": "card-service",
+      "description": "Compact bento tile: wash icon tile turns solid orange on hover, card lifts.",
+      "html": "<button class=\"ds-service\"><span class=\"ds-service-icon\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2 4 14h7l-1 8 9-12h-7l1-8z\"/></svg></span><span class=\"ds-service-title\">Laadpalen</span><span class=\"ds-service-text\">Thuisladen met een slimme, gecertificeerde laadpaal.</span><span class=\"ds-service-more\">Meer info →</span></button>",
+      "css": ".ds-service { display: flex; flex-direction: column; width: 280px; min-height: 240px; padding: 28px; text-align: left; border: 0; border-radius: 8px; background: #fff; color: #181b1f; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; cursor: pointer; box-shadow: inset 0 0 0 1px #e8eaec; transition: transform 300ms cubic-bezier(0.2,0.8,0.2,1), box-shadow 300ms; } .ds-service:hover { transform: translateY(-4px); box-shadow: inset 0 0 0 1px #d1d5d9, 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); } .ds-service-icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 6px; background: #f5f6f7; color: #d42a00; transition: background 200ms, color 200ms; } .ds-service:hover .ds-service-icon { background: #d42a00; color: #fff; } .ds-service-title { margin-top: 20px; font-size: 1.5rem; font-weight: 800; line-height: 1; text-transform: uppercase; font-stretch: 75%; font-variation-settings: 'wdth' 75; } .ds-service-text { margin-top: 12px; line-height: 1.625; color: #464e55; } .ds-service-more { margin-top: auto; padding-top: 20px; font-size: 14px; font-weight: 700; color: #d42a00; } .ds-service:focus-visible { outline: 3px solid #ff3300; outline-offset: 2px; }"
+    },
+    {
+      "name": "Bracketed Photo",
+      "kind": "custom",
+      "description": "Signature drafting frame: orange 4px corner brackets offset outside a photo's top-left and bottom-right.",
+      "html": "<div class=\"ds-bracket\"><div class=\"ds-bracket-photo\"></div><span class=\"ds-bracket-tl\"></span><span class=\"ds-bracket-br\"></span></div>",
+      "css": ".ds-bracket { position: relative; width: 240px; margin: 16px; } .ds-bracket-photo { aspect-ratio: 4 / 5; border-radius: 8px; background: linear-gradient(to top, rgb(15 17 19 / 0.7), transparent), #343a40; } .ds-bracket-tl, .ds-bracket-br { position: absolute; width: 56px; height: 56px; border-color: #ff3300; border-style: solid; } .ds-bracket-tl { top: -12px; left: -12px; border-width: 4px 0 0 4px; } .ds-bracket-br { right: -12px; bottom: -12px; border-width: 0 4px 4px 0; }"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "description": "Sticky Switchboard Ink bar; links gain an orange underline that scales in from the left.",
+      "html": "<nav class=\"ds-nav\"><strong class=\"ds-nav-logo\">SV ELECTRO</strong><a href=\"#\">Diensten</a><a href=\"#\">Realisaties</a><a href=\"#\">Over ons</a><a href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 4px; height: 72px; padding: 0 24px; background: #0f1113; font-family: Archivo, ui-sans-serif, system-ui, sans-serif; } .ds-nav-logo { margin-right: auto; color: #fff; font-weight: 850; letter-spacing: -0.01em; font-stretch: 72%; font-variation-settings: 'wdth' 72; font-size: 1.4rem; } .ds-nav a { position: relative; padding: 8px 14px; color: #d1d5d9; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: color 150ms; } .ds-nav a::after { content: ''; position: absolute; left: 14px; right: 14px; bottom: 4px; height: 2px; background: #ff3300; transform: scaleX(0); transform-origin: left; transition: transform 200ms cubic-bezier(0.2,0.8,0.2,1); } .ds-nav a:hover { color: #fff; } .ds-nav a:hover::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 3px solid #ff3300; outline-offset: 2px; border-radius: 6px; }"
+    },
+    {
+      "name": "Section Headline",
+      "kind": "custom",
+      "description": "Section opener: condensed uppercase headline, no kicker, with the intro beside or below it.",
+      "html": "<div class=\"ds-head\"><h2 class=\"ds-headline\">Werk waar we achter staan</h2><p class=\"ds-intro\">Een greep uit recente projecten in de Zuiderkempen en omstreken.</p></div>",
+      "css": ".ds-head { font-family: Archivo, ui-sans-serif, system-ui, sans-serif; max-width: 560px; } .ds-headline { margin: 0; font-size: 3rem; font-weight: 850; line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase; font-stretch: 72%; font-variation-settings: 'wdth' 72; color: #0f1113; text-wrap: balance; } .ds-intro { margin: 16px 0 0; font-size: 1.125rem; line-height: 1.625; color: #464e55; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Installer's Drawing",
+    "overview": "The site reads like a clean electrical drawing brought to life. Dark ink panels carry a faint drafting grid. Photos are framed by heavy corner brackets, like the registration marks on a schematic. Every label is set in condensed capitals, as if lettered on a plan. Nothing is ornament for its own sake. Each mark either frames real work, labels a part or points to the next step: calling, or requesting a quote.\n\nThe system alternates between two surfaces. Switchboard ink (near-black) carries the hero, the about section, the header, the mobile action bar and the CMS sidebar. Paper white and a cool ink wash carry the reading and browsing sections. One hot colour, Live-Wire Orange, marks what is live: the primary action, the active state and the accent word in the headline. Real SV Electro project photos are the main imagery. The type and the drawing marks frame them; they never replace them.\n\nComponents should feel solid, like switchgear: decisive, tactile and sized for a thumb. Buttons are at least 44–48px tall and lift firmly on hover. Cards are crisp rectangles with only slightly eased corners.",
+    "keyCharacteristics": [
+      "Ink and paper surfaces alternate; one signal accent marks what is live.",
+      "Condensed, heavy, uppercase Archivo for display and titles. Plain Archivo for reading.",
+      "Drafting marks (a masked blueprint grid, 4px corner brackets) as the signature, kept to dark surfaces and photos.",
+      "Flat at rest. Surfaces lift only in response to interaction or when an overlay opens.",
+      "Only real project photography. No stock imagery."
+    ],
+    "rules": [
+      {
+        "name": "The Live-Wire Rule",
+        "body": "Orange marks what is live: the next action, the current state or the accent word. If an element is neither clickable, active nor the headline's accent, it doesn't get orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Orange Rule",
+        "body": "#ff3300 is for ink backgrounds and large graphics. #d42a00 is for text and fills on white. Never swap them.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lettered-Plan Rule",
+        "body": "Condensed capitals are for names: headings, titles and the mobile menu. Sentences, descriptions and form copy are never set in condensed caps.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Kicker Rule",
+        "body": "No eyebrow or kicker label above a heading. Context that matters (like \"Erkend elektricien · Heist-op-den-Berg\" in the hero) sits below the headline, with an icon, as information.",
+        "section": "typography"
+      },
+      {
+        "name": "The Switched-On Rule",
+        "body": "Elements are flat until they're touched. A shadow means \"this responds\" or \"this sits above the page\". It is never decoration on a static block.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Drawing-Marks-on-Ink Rule",
+        "body": "The blueprint grid and other drafting marks belong to dark ink surfaces and to framing real photos. They never go on white or ink-wash sections, and they never stack two layers deep.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do use Live-Wire Deep (#d42a00) for every orange text or fill on a light surface, and Live-Wire Orange (#ff3300) only on ink or for large graphic marks.",
+      "Do set headings in condensed, heavy uppercase Archivo (display utility) and keep descriptions in normal-width sentence case.",
+      "Do frame hero and feature photos with the orange corner brackets, and use only real SV Electro project photography.",
+      "Do keep touch targets at least 44px (buttons 48px), and keep the mobile action bar's call and quote actions on every public page.",
+      "Do keep surfaces flat at rest and reserve shadows for hover lift, overlays and the primary button's glow."
+    ],
+    "donts": [
+      "Don't use stock or generic electrician imagery. If there is no real photo, use an ink panel instead.",
+      "Don't put the blueprint grid on white or ink-wash sections, or layer it twice.",
+      "Don't set #ff3300 text or button fills on white (3.7:1 fails AA).",
+      "Don't use orange on anything that isn't live: not decorative borders, section backgrounds or body text.",
+      "Don't round cards beyond 8px or turn buttons into pills. Pills are reserved for filter chips and badges.",
+      "Don't put an eyebrow or kicker label above a heading.",
+      "Don't add decorative glows, blurred colour blobs or duplicated content strips."
+    ]
+  }
+}

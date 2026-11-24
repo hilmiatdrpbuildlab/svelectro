@@ -1,0 +1,21 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "svelectro",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"compatibility_date": "2026-09-01",
+	"compatibility_flags": ["nodejs_als", "nodejs_compat"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"observability": { "enabled": true },
+	// Secrets (wrangler secret put): DATABASE_URL, NEON_STORAGE_ACCESS_KEY_ID,
+	// NEON_STORAGE_SECRET_ACCESS_KEY, AUTH_SECRET. Non-secret settings below.
+	"keep_vars": true,
+	"vars": {
+		"NEON_STORAGE_ENDPOINT": "https://br-soft-forest-bgrup9fw.storage.c-9.eu-central-1.aws.neon.tech",
+		"NEON_STORAGE_REGION": "eu-central-1",
+		"NEON_STORAGE_BUCKET": "media",
+		"NEON_STORAGE_PRIVATE_BUCKET": "private"
+	}
+}

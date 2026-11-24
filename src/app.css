@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+/*
+ * SV Electro palette, taken from svelectro.be and the company vans:
+ *  - signal red-orange #FF3300 (the plug logo, van lettering)
+ *  - ink black (wordmark), slate grey (van body)
+ * #FF3300 on white is only 3.7:1, so text and buttons on light backgrounds use brand-600
+ * (#D42A00, 5.1:1 with white). The pure brand-500 is used on dark surfaces (5.0:1 on ink-950)
+ * and for large graphic accents.
+ */
+@theme {
+	--font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+	--color-brand-50: #fff3ef;
+	--color-brand-100: #ffe2d8;
+	--color-brand-200: #ffc2ad;
+	--color-brand-300: #ff9573;
+	--color-brand-400: #ff6138;
+	--color-brand-500: #ff3300;
+	--color-brand-600: var(--brand-accent, #d42a00);
+	--color-brand-700: #b02300;
+	--color-brand-800: #8c1c00;
+	--color-brand-900: #5e1300;
+
+	--color-ink-50: #f5f6f7;
+	--color-ink-100: #e8eaec;
+	--color-ink-200: #d1d5d9;
+	--color-ink-300: #aab2b9;
+	--color-ink-400: #7d8890;
+	--color-ink-500: #5c666e;
+	--color-ink-600: #464e55;
+	--color-ink-700: #343a40;
+	--color-ink-800: #22272b;
+	--color-ink-900: #181b1f;
+	--color-ink-950: #0f1113;
+
+	/* Van body grey */
+	--color-slate-van: #8e9ca4;
+
+	--ease-snap: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
+		-webkit-text-size-adjust: 100%;
+	}
+	body {
+		@apply bg-white font-sans text-ink-800 antialiased;
+		font-feature-settings: 'ss01', 'tnum';
+	}
+	:focus-visible {
+		outline: 3px solid var(--color-brand-500);
+		outline-offset: 2px;
+	}
+	::selection {
+		background: var(--color-brand-500);
+		color: white;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
+}
+
+@utility font-condensed {
+	font-stretch: 75%;
+	font-variation-settings: 'wdth' 75;
+}
+
+@utility display {
+	font-family: var(--font-display);
+	font-weight: 850;
+	font-stretch: 72%;
+	font-variation-settings: 'wdth' 72;
+	letter-spacing: -0.01em;
+	line-height: 0.95;
+	text-transform: uppercase;
+}
+
+@utility eyebrow {
+	font-size: 0.8125rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+@utility container-x {
+	margin-inline: auto;
+	width: 100%;
+	max-width: 80rem;
+	padding-inline: 1rem;
+	@media (width >= 40rem) {
+		padding-inline: 1.5rem;
+	}
+	@media (width >= 64rem) {
+		padding-inline: 2rem;
+	}
+}
+
+/* Blueprint grid used behind the hero and dark sections. */
+@utility bg-blueprint {
+	background-image:
+		linear-gradient(to right, rgb(255 255 255 / 0.045) 1px, transparent 1px),
+		linear-gradient(to bottom, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+	background-size: 48px 48px;
+}
+
+@utility btn {
+	@apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-3 text-[0.95rem] font-bold tracking-wide transition duration-200 ease-(--ease-snap) focus-visible:outline-offset-4 disabled:cursor-not-allowed disabled:opacity-60;
+}
+@utility btn-primary {
+	@apply btn bg-brand-600 text-white shadow-[0_1px_0_rgb(255_255_255/0.2)_inset,0_8px_24px_-8px_rgb(212_42_0/0.6)] hover:-translate-y-0.5 hover:bg-brand-700 active:translate-y-0;
+}
+@utility btn-ghost-light {
+	@apply btn text-white ring-1 ring-white/30 ring-inset hover:bg-white/10 hover:ring-white/60;
+}
+@utility btn-outline {
+	@apply btn bg-white text-ink-900 ring-1 ring-ink-200 ring-inset hover:ring-ink-400;
+}
+@utility btn-sm {
+	@apply min-h-9 px-3 py-1.5 text-sm;
+}
+@utility field-label {
+	@apply mb-1.5 block text-sm font-semibold text-ink-800;
+}
+@utility field {
+	@apply block w-full rounded-md border-ink-200 bg-white px-3.5 py-2.5 text-[0.95rem] text-ink-900 shadow-xs transition placeholder:text-ink-500 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/25 aria-invalid:border-brand-600;
+}
+@utility field-error {
+	@apply mt-1 text-sm font-medium text-brand-700;
+}
